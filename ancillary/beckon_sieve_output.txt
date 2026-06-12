@@ -1,0 +1,4 @@
+mod 36   : [7, 27, 35] (Beckon: [7, 27, 35])
+mod 900  : count = 39  first10 = [7, 27, 71, 99, 107, 151, 171, 187, 207, 223]  sha256 = ad92b177a09c0e48f716198e56d76ac8d9ef4e70da37f409efd279ba62cf33c3
+mod 44100: count = 1209  first10 = [71, 99, 107, 151, 171, 207, 323, 331, 351, 367]  sha256 = b371ed5e89547eb73cedc33a5114e2f535ee84294eb1ee16ef1ad9d4eacc11fc
+

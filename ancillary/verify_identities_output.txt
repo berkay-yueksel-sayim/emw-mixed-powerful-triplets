@@ -1,0 +1,19 @@
+u^3-3u+2 == (u-1)^2 (u+2): OK
+u^3-3u-2 == (u+1)^2 (u-2): OK
+V^2 identity (sigma quotient): OK
+W^2 identity (tau quotient): OK
+(t+1)^2 (t^6+t^3+1) == t^4 (u+2)(u^3-3u+1): OK
+(t-1)^2 (t^6+t^3+1) == t^4 (u-2)(u^3-3u+1): OK
+u=2+1/T, W=S/T^2 gives S^2 = 9T^3+27T^2+18T+3: OK
+(x,y)=(9T+9,9S) gives y^2 = x^3-81x+243: OK
+I = 243, J = -6561 for q_minus: OK
+(u^3+1)^2-(u^3+1)+1 == u^6+u^3+1: OK
+(s^3-1)^2+(s^3-1)+1 == s^6-s^3+1: OK
+squares mod 9 == {0,1,4,7}: OK
+cubes mod 9 == {0,1,8}: OK
+cubes of 1+3k mod 27 in {1,10,19}: OK
+x = 1+3k => x^2+x+1 == 3 mod 9; x = -1+3k => x^2-x+1 == 3 mod 9: OK
+conic solutions |z|<=1e6 == recurrence orbit: OK
+only cube among z_k (k<=2000, forward branch) is z=1: OK
+t^6+t^3+1=3w^2 has only t=1 for |t|<=1e4: OK
+ALL CHECKS PASSED
