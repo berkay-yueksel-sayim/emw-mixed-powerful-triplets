@@ -22,14 +22,14 @@
 \newcommand{\vp}{v}
 
 \title{Nonexistence of consecutive powerful triplets around cubes\\ with mixed prime factorizations}
-\author{Berkay Y\"uksel Sayim\\ \small Independent Researcher, Germany\\ \small \texttt{berksa@tutamail.com} ~$\cdot$~ ORCID 0009-0004-4993-7352}
-\date{June 2026}
+\author{Berkay Y\"uksel Sayim\\ \small Independent Researcher, Germany\\ \small \texttt{berksa@tutamail.com}~$\cdot$~ORCID 0009-0004-4993-7352}
+\date{July 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-A positive integer is \emph{powerful} if every prime in its factorization occurs with exponent at least two. The Erd\H{o}s--Mollin--Walsh conjecture asserts that no three consecutive integers are all powerful. Chan (2025) excluded triples of the form $x^3-1=p^3y^2,\; x^3,\; x^3+1=q^3z^2$, and She (2025) excluded $x^3-1=p^2a^3,\; x^3,\; x^3+1=q^2b^3$, with $p,q$ prime. We close the remaining \emph{mixed} configurations: there are no consecutive powerful triples of the form $x^3-1=p^2a^3,\ x^3+1=q^3z^2$, nor of the form $x^3-1=p^3y^2,\ x^3+1=q^2b^3$. The case analysis reduces both families to the single Diophantine equation $t^6+t^3+1=3w^2$, which we solve completely: exploiting the palindromic symmetry of the genus-$2$ curve $3w^2=t^6+t^3+1$, we descend to an elliptic quotient of Mordell--Weil rank $0$ (curve \texttt{1296.k1} in the LMFDB, Cremona label \texttt{1296f2}), so the only rational solutions are $(t,w)=(1,\pm 1)$. We further show that no finite congruence sieve can decide this equation, explaining the necessity of the elliptic argument. As a complementary result we refine Beckon's mod-$36$ constraint on the smallest member of a hypothetical triple to arbitrary prime-square moduli and quantify the density decay of admissible residue classes.
+A positive integer is \emph{powerful} if every prime in its factorization occurs with exponent at least two. The Erd\H{o}s--Mollin--Walsh conjecture asserts that no three consecutive integers are all powerful. Chan (2025) excluded triples of the form $x^3-1=p^3y^2,\; x^3,\; x^3+1=q^3z^2$, and She (2025) excluded $x^3-1=p^2a^3,\; x^3,\; x^3+1=q^2b^3$, with $p,q$ prime. We close the remaining \emph{mixed} configurations: there are no consecutive powerful triples of the form $x^3-1=p^2a^3,\ x^3+1=q^3z^2$, nor of the form $x^3-1=p^3y^2,\ x^3+1=q^2b^3$. The case analysis reduces both families to the single Diophantine equation $t^6+t^3+1=3w^2$, which we solve completely: exploiting the palindromic symmetry of the genus-$2$ curve $3w^2=t^6+t^3+1$, we descend to an elliptic quotient of Mordell--Weil rank $0$ (curve \texttt{1296.k1} in the LMFDB, Cremona label \texttt{1296f2}), so the only rational solutions are $(t,w)=(1,\pm 1)$. We further show that no finite congruence sieve can decide this equation, so that some global (non-congruence) argument is required. As a complementary result we refine Beckon's mod-$36$ constraint on the smallest member of a hypothetical triple to arbitrary prime-square moduli and quantify the density decay of admissible residue classes.
 \end{abstract}
 
 \section{Introduction}
@@ -59,7 +59,7 @@ The proof is a case analysis in the spirit of \cite{Chan2025,She2025} (Sections~
 \begin{equation}\label{eq:wall}
 t^6+t^3+1=3w^2,
 \end{equation}
-with $t\ge 7$ in family (M1) and $t\le -5$ in family (M2). Equation~\eqref{eq:wall} concerns the ninth cyclotomic value $\Phi_9(t)$ and does not yield to the degree-$4$ or congruence techniques of \cite{Chan2025,She2025}; indeed we prove (Remark~\ref{rem:covering}) that \emph{no} finite congruence sieve can decide it. Instead we solve it completely:
+with $t\ge 7$ in family (M1) and $t\le -5$ in family (M2). Equation~\eqref{eq:wall} concerns the ninth cyclotomic value $\Phi_9(t)$ and defines a curve of genus $2$, outside the reach of the degree-$4$ reductions used in \cite{Chan2025,She2025}; moreover, we prove (Remark~\ref{rem:covering}) that \emph{no} finite congruence sieve can decide it. Instead we solve it completely:
 
 \begin{theorem}\label{thm:wall}
 The only solutions of $t^6+t^3+1=3w^2$ in rational numbers are $(t,w)=(1,\pm 1)$.
@@ -67,7 +67,7 @@ The only solutions of $t^6+t^3+1=3w^2$ in rational numbers are $(t,w)=(1,\pm 1)$
 
 The proof (Section~\ref{sec:wall}) exploits the palindromic symmetry $t\mapsto 1/t$ of the genus-$2$ curve $3w^2=t^6+t^3+1$: the curve admits two independent elliptic quotients over $\Q$, and one of them has Mordell--Weil rank $0$ with trivial torsion --- it is the curve \texttt{1296.k1} in the LMFDB \cite{LMFDB}, Cremona label \texttt{1296f2} --- which pins down all rational points. Since $t=1$ lies in neither branch range, both remaining branches are empty and Theorem~\ref{thm:main} follows.
 
-As a complementary result in the same circle of ideas we record a modular refinement of a little-known constraint of Beckon \cite{Beckon} on arbitrary consecutive powerful triples (not assuming a cube in the middle).
+As a complementary result in the same circle of ideas we record a modular refinement of a constraint of Beckon \cite{Beckon} on arbitrary consecutive powerful triples (not assuming a cube in the middle).
 
 \begin{proposition}\label{prop:beckon}
 Let $(n,n+1,n+2)$ be powerful. Then, beyond Beckon's constraint $n \bmod 36\in\{7,27,35\}$:
@@ -78,7 +78,7 @@ Let $(n,n+1,n+2)$ be powerful. Then, beyond Beckon's constraint $n \bmod 36\in\{
 \end{enumerate}
 \end{proposition}
 
-All computer calculations below are short and reproducible; the elliptic-curve computations were performed in SageMath and independently cross-checked (two independent runs, plus the LMFDB data \cite{LMFDB}); the symbolic identities were verified exactly in SymPy. The verification scripts are provided as ancillary files. 
+All computer calculations below are short and reproducible; the elliptic-curve computations were performed in SageMath and independently cross-checked (two independent runs, plus the LMFDB data \cite{LMFDB}); the symbolic identities were verified exactly in SymPy. The verification scripts are provided as ancillary files.
 
 \section{Preliminaries}\label{sec:prelim}
 
@@ -88,7 +88,7 @@ Throughout, $x\ge 2$ is an integer, $p,q$ are primes, and $\vp_\ell$ denotes the
 In any triple of consecutive powerful numbers the even member is divisible by $4$. If the middle member is $x^3$, then $x$ is even; in particular $x^3\pm1$ are odd and coprime, so $p\neq q$ in \eqref{eq:M1}--\eqref{eq:M2}.
 \end{lemma}
 \begin{proof}
-Exactly one or two of three consecutive integers are even; a powerful even number is $\equiv 0 \pmod 4$. If $n$ and $n+2$ were both even, one of them would be $\equiv 2\pmod 4$, hence not powerful. So the even member is unique, namely the middle one if the outer two are odd. For the middle member $x^3$: if $x$ were odd, then $x^3\pm1$ would be even, contradiction. Finally $\gcd(x^3-1,x^3+1)\mid 2$ and both are odd.
+Exactly one or two of three consecutive integers are even; a powerful even number is $\equiv 0 \pmod 4$. If $n$ and $n+2$ were both even, one of them would be $\equiv 2\pmod 4$, hence not powerful. Thus the even member is unique, namely the middle one if the outer two are odd. For the middle member $x^3$: if $x$ were odd, then $x^3\pm1$ would be even, contradiction. Finally $\gcd(x^3-1,x^3+1)\mid 2$ and both are odd.
 \end{proof}
 
 \begin{lemma}[gcd and LTE]\label{lem:gcd}
@@ -125,7 +125,7 @@ $u^2+u+1=v^3$ has only $u\in\{-19,-1,0,18\}$, and $u^2-u+1=v^3$ only $u\in\{-18,
 The integral points of $Y^2=X^3+k$ are: for $k=2$: $(-1,\pm1)$; for $k=-2$: $(3,\pm5)$; for $k=54$: $(3,\pm9)$; for $k=-54$: $(7,\pm17)$; for $k=-162$: none.
 \end{lemma}
 \begin{proof}
-All five values satisfy $|k|\le 10^4$ and are covered by the complete solution of Mordell's equation in this range \cite{GPZ}, extended to $|k|\le 10^7$ in \cite{BennettGhadermarzi}; see also the corresponding LMFDB data \cite{LMFDB}. (The case $k=-2$ is classical.) We re-verified all five lists with \texttt{integral\_points} in SageMath in two independent runs. 
+All five values satisfy $|k|\le 10^4$ and are covered by the complete solution of Mordell's equation in this range \cite{GPZ}, extended to $|k|\le 10^7$ in \cite{BennettGhadermarzi}; see also the corresponding LMFDB data \cite{LMFDB}. (The case $k=-2$ is classical.) We re-verified all five lists with \texttt{integral\_points} in SageMath in two independent runs.
 \end{proof}
 
 We will also use without further comment: squares mod $9$ are $\{0,1,4,7\}$; cubes mod $9$ are $\{0,1,8\}$; cubes of integers $\equiv1\pmod3$ are $\equiv\{1,10,19\}\pmod{27}$.
@@ -158,7 +158,7 @@ She side (Lemma~\ref{lem:she1}):
 \item[(i)] $x-1=u^3$ with $u$ odd, $u\equiv1\pmod3$ (so $u\equiv1\bmod 6$), and $x^2+x+1=p^2t^3$. On the Chan side $g_+=3$ and $\vp_3(x^2-x+1)=1$ exactly. Sub-split on $q$:
   \begin{itemize}
   \item $q=3$: $x^3+1=27z^2$ gives $\vp_3(x+1)=2+2\vp_3(z)$ even and all other exponents in $x+1$ even, so $x+1=m^2$; then $m^2-u^3=2$, again $Y^2=X^3+2$, so $u=-1$, $x=0<2$. \emph{Closed.}
-  \item $q\neq3$, $q^3\mid x^2-x+1$: then $\vp_3(x+1)$ is odd, say $x+1=3^{2j+1}m^2$ with $\gcd(m,3)=1$ up to squares. If $j\ge1$ then $27\mid x+1=u^3+2$, i.e.\ $u^3\equiv-2\equiv25\pmod{27}$, impossible for $u\equiv1\pmod3$. So $j=0$, $x+1=3m^2$, i.e.\ $u^3=3m^2-2$; multiplying by $27$: $(9m)^2=(3u)^3+54$. By Lemma~\ref{lem:mordell} the only points have $X=3u=3$, so $u=1$, $x=2$; but $x^3-1=7$ is not powerful. \emph{Closed.}
+  \item $q\neq3$, $q^3\mid x^2-x+1$: then $\vp_3(x+1)$ is odd, say $x+1=3^{2j+1}m^2$ with $\gcd(m,3)=1$ up to squares. If $j\ge1$ then $27\mid x+1=u^3+2$, i.e.\ $u^3\equiv-2\equiv25\pmod{27}$, impossible for $u\equiv1\pmod3$. Hence $j=0$, $x+1=3m^2$, i.e.\ $u^3=3m^2-2$; multiplying by $27$: $(9m)^2=(3u)^3+54$. By Lemma~\ref{lem:mordell} the only points have $X=3u=3$, so $u=1$, $x=2$; but $x^3-1=7$ is not powerful. \emph{Closed.}
   \item $q\neq3$, $q^3\mid x+1$: then $x^2-x+1=3w^2$ ($\vp_3=1$ exactly, $q\nmid$, all other exponents even). With $x=u^3+1$:
   \[
   (u^3+1)^2-(u^3+1)+1=u^6+u^3+1=3w^2,
@@ -190,7 +190,7 @@ She side has $g_+=1$:
   (s^3-1)^2+(s^3-1)+1=s^6-s^3+1=3w^2,
   \]
   i.e.\ equation~\eqref{eq:wall} with $t=-s\le-5$. \emph{This is the only surviving branch of (M2); it is empty by Theorem~\ref{thm:wall}.}
-  \item $p\neq3$, $p\mid x^2+x+1$: then $\vp_3(x-1)$ is odd, $x-1=3^{2j+1}m^2$. If $j\ge1$ then $27\mid s^3-2$, so $s^3\equiv2\pmod 9$, impossible (cubes mod $9$). So $j=0$, $s^3=3m^2+2$; multiplying by $27$: $(9m)^2=(3s)^3-54$ with $3\mid X=3s$. By Lemma~\ref{lem:mordell} the only integral points have $X=7$, not divisible by $3$. \emph{Closed.}
+  \item $p\neq3$, $p\mid x^2+x+1$: then $\vp_3(x-1)$ is odd, $x-1=3^{2j+1}m^2$. If $j\ge1$ then $27\mid s^3-2$, so $s^3\equiv2\pmod 9$, impossible (cubes mod $9$). Hence $j=0$, $s^3=3m^2+2$; multiplying by $27$: $(9m)^2=(3s)^3-54$ with $3\mid X=3s$. By Lemma~\ref{lem:mordell} the only integral points have $X=7$, not divisible by $3$. \emph{Closed.}
   \end{itemize}
 \end{itemize}
 
@@ -248,7 +248,7 @@ and the further substitution $(x,y)=(9T+9,\,9S)$ gives the elliptic curve
 \[
 E:\; y^2=x^3-81x+243,
 \]
-of conductor $1296$. This is the curve \texttt{1296.k1} in the LMFDB \cite{LMFDB} (Cremona label \texttt{1296f2}): it has Mordell--Weil rank $0$ and trivial torsion, so $E(\Q)=\{\mathcal{O}\}$ --- there is no affine rational point. (We verified rank $0$ and triviality of torsion independently in SageMath with \texttt{rank(proof=True)}.) Running the birational maps backwards, any rational point of $\mathcal{D}_-$ with $u\neq2$ would produce an affine rational point of $E$; hence $u=2$ is the only possibility, and then $W^2=q_-(2)=0$.
+of conductor $1296$. This is the curve \texttt{1296.k1} in the LMFDB \cite{LMFDB} (Cremona label \texttt{1296f2}): it has Mordell--Weil rank $0$ and trivial torsion, so $E(\Q)=\{\mathcal{O}\}$ --- there is no affine rational point. (We verified rank $0$ and triviality of torsion independently in SageMath with \texttt{rank(proof=True)}.) Explicitly, the maps are inverted by $T=(x-9)/9$, $S=y/9$, so that $u=2+1/T=(2x-9)/(x-9)$ and $W=S/T^{2}=9y/(x-9)^{2}$; under this correspondence the affine rational points of $\mathcal{D}_-$ with $u\neq2$ are in bijection with the affine rational points of $E$ with $x\neq9$. No rational points are lost at the exceptional loci: the two points at infinity of $\mathcal{D}_-$ are irrational (as noted above, $W_\infty^{2}=3$), the point $(2,0)$ corresponds to $\mathcal{O}\in E$, and the points of $E$ with $x=9$ satisfy $y^{2}=243$ and are likewise irrational. Since $E(\Q)=\{\mathcal{O}\}$ contains no affine point, $u=2$ is the only possibility, and then $W^2=q_-(2)=0$.
 
 Pulling back to $\mathcal{C}$: $u=t+1/t=2$ forces $(t-1)^2=0$, so $t=1$ and $Y^2=9$, $w=\pm1$. \end{proof}
 
@@ -257,17 +257,16 @@ The companion quotient $\mathcal{D}_+:V^2=q_+(u)$ has Jacobian $y^2=x^3-189x+999
 \end{remark}
 
 \begin{remark}[no congruence sieve suffices]\label{rem:covering}
-Equation \eqref{eq:wall} cannot be resolved by congruences alone, in the following precise sense. Substituting $z=t^3$, any solution gives a point on the conic $z^2+z+1=3w^2$; writing $2z+1=3c$, $2w=b$ reduces the conic to the Pell equation $b^2-3c^2=1$, whose solutions with $b$ even form a single orbit $\{z_k\}_{k\in\Z}$ of the recurrence $z_{k+1}=14z_k-z_{k-1}+6$ through $(z_0,z_1)=(-2,1)$, the sign choice corresponding to the symmetry $z\mapsto-1-z$. Asking whether \eqref{eq:wall} has a solution with $t\neq1$ is asking whether the orbit contains a cube other than $z_1=1$. Since $z_1=1$ \emph{is} a cube, its residue class modulo any period of the sequence is a ``shadow'' that no congruence can eliminate --- and via the symmetry it also protects a class in the negative branch. Hence no finite system of congruence conditions can prove the nonexistence of further cubes in the orbit, and some global (here: elliptic) input is unavoidable. A direct check of the recurrence (in exact integer arithmetic) confirms that no $z_k$ with $k\le2000$ other than $z_1$ is a cube, the largest candidates having more than $2200$ decimal digits.
+Equation \eqref{eq:wall} cannot be resolved by congruences alone, in the following precise sense. Substituting $z=t^3$, any solution gives a point on the conic $z^2+z+1=3w^2$; writing $2z+1=3c$, $2w=b$ reduces the conic to the Pell equation $b^2-3c^2=1$, whose solutions with $b$ even form a single orbit $\{z_k\}_{k\in\Z}$ of the recurrence $z_{k+1}=14z_k-z_{k-1}+6$ through $(z_0,z_1)=(-2,1)$, the sign choice corresponding to the symmetry $z\mapsto-1-z$. Asking whether \eqref{eq:wall} has a solution with $t\neq1$ is asking whether the orbit contains a cube other than $z_1=1$. Since $z_1=1$ \emph{is} a cube, its residue class modulo any period of the sequence is a ``shadow'' that no congruence can eliminate --- and via the symmetry it also protects a class in the negative branch. Hence no finite system of congruence conditions can prove the nonexistence of further cubes in the orbit, and some global (here: elliptic) input is unavoidable. A direct check of the recurrence (in exact integer arithmetic) confirms that no $z_k$ with $k\le2000$ other than $z_1$ is a cube, the largest candidates having more than $2200$ decimal digits. (This computation only illustrates the covering obstruction; it is not used in the proof of Theorem~\ref{thm:wall}, which rests entirely on the rank-$0$ descent of this section.)
 \end{remark}
 
 \begin{remark}[relation to Nagell--Ljunggren and to powers in recurrences]
-Since $\Phi_9(t)=(t^9-1)/(t^3-1)$, equation \eqref{eq:wall} is adjacent to the classical equations $(x^n-1)/(x-1)=3y^m$ of Nagell--Ljunggren type. Note however that Nagell's theorem on $x^2+x+1=3y^n$ ($n>2$) does not apply: in \eqref{eq:wall} the square sits on the right-hand side ($m=2$), while the cube condition sits inside the conic variable $z=t^3$. In the language of Remark~\ref{rem:covering}, \eqref{eq:wall} asks for the cubes in a fixed binary recurrence orbit; the effective methods underlying the finiteness results of Peth\H{o} \cite{Petho} and Shorey--Stewart \cite{ShoreyStewart} guarantee that there are only finitely many such cubes, but do not by themselves produce the explicit solution set. For the closely related factorisation $(2z+1)(z^2+z+1)=y^\ell$ see Bennett, Patel, and Siksek \cite{BPS}. We are not aware of a published complete determination of the integer (or rational) solutions of \eqref{eq:wall}; the contribution here is the explicit resolution via the rank-$0$ elliptic quotient. 
+Since $\Phi_9(t)=(t^9-1)/(t^3-1)$, equation \eqref{eq:wall} is adjacent to the classical equations $(x^n-1)/(x-1)=3y^m$ of Nagell--Ljunggren type. Note however that Nagell's theorem on $x^2+x+1=3y^n$ ($n>2$) does not apply: in \eqref{eq:wall} the square sits on the right-hand side ($m=2$), while the cube condition sits inside the conic variable $z=t^3$. In the language of Remark~\ref{rem:covering}, \eqref{eq:wall} asks for the cubes in a fixed binary recurrence orbit; the effective methods underlying the finiteness results of Peth\H{o} \cite{Petho} and Shorey--Stewart \cite{ShoreyStewart} guarantee that there are only finitely many such cubes, but do not by themselves produce the explicit solution set. For the closely related factorization $(2z+1)(z^2+z+1)=y^\ell$ see Bennett, Patel, and Siksek \cite{BPS}. We are not aware of a published complete determination of the integer (or rational) solutions of \eqref{eq:wall}; the contribution here is the explicit resolution via the rank-$0$ elliptic quotient.
 \end{remark}
 
 \section{A modular refinement of Beckon's condition}\label{sec:beckon}
 
-Beckon \cite{Beckon} observed that the smallest member $n$ of a triple of consecutive powerful numbers must satisfy $n\equiv7,27,35\pmod{36}$; this elementary but useful constraint appears not to have been taken up in the recent literature. 
-The underlying mechanism generalizes to any prime-square modulus.
+Beckon \cite{Beckon} observed that the smallest member $n$ of a triple of consecutive powerful numbers must satisfy $n\equiv7,27,35\pmod{36}$; this elementary but useful constraint appears not to have been taken up in the recent literature. The underlying mechanism generalizes to any prime-square modulus.
 
 \begin{proof}[Proof of Proposition~\ref{prop:beckon}]
 If $m$ is powerful and $\ell$ prime, then $\vp_\ell(m)\neq1$; in particular, if $m\equiv c\pmod{\ell^2}$ with $\ell\mid c$, $\ell^2\nmid c$, then $m$ is not powerful. Call $r\bmod \ell^2$ \emph{admissible} if none of $r,r+1,r+2$ is $\equiv\ell c'\pmod {\ell^2}$ with $\ell\nmid c'$. For $\ell\ge5$ the $\ell-1$ forbidden residues $\ell c'$ are pairwise at distance $\ge5$, so the $3(\ell-1)$ shifted prohibitions are distinct, leaving $\ell^2-3(\ell-1)=\ell^2-3\ell+3$ admissible classes. For $\ell=2$: $n$ must be odd and $n+1\equiv0\pmod4$, leaving the class $3\bmod4$ ($1$ of $4$). For $\ell=3$: the windows avoiding $\{3,6\}\bmod 9$ start at $r\in\{0,7,8\}$ ($3$ of $9$). By CRT the admissible classes multiply: modulo $36$ one obtains exactly Beckon's $\{7,27,35\}$; modulo $900=2^2 3^2 5^2$ there are $3\cdot13=39$ classes; modulo $44100=2^23^25^27^2$ there are $39\cdot31=1209$. (The explicit lists were computed by two independent implementations with matching output.) Finally, $\prod_{5\le\ell\le L}\bigl(1-\tfrac{3}{\ell}+\tfrac{3}{\ell^2}\bigr)\asymp(\log L)^{-3}$ by Mertens' theorem, which proves (iii).
@@ -278,37 +277,37 @@ If $m$ is powerful and $\ell$ prime, then $\vp_\ell(m)\neq1$; in particular, if 
 Together with \cite{Chan2025} and \cite{She2025}, Theorem~\ref{thm:main} completes the four shape-combinations $\{p^3\cdot\square,\,p^2\cdot\mathrm{cube}\}^2$ for consecutive powerful triples around a cube in which both outer members are divisible by a single controlling prime to an exact pattern. Natural next steps in this program include the relaxations $p=q$ and composite cofactors, and She's question whether $x^n-1$ can be powerful for $x>1$, $n>2$. The bielliptic reduction of Section~\ref{sec:wall} may be of independent use for other palindromic sextic obstructions in this circle of problems.
 
 \paragraph{Acknowledgements.}
-Substantial parts of this work, including the reduction of Section~\ref{sec:wall}, were developed with the assistance of Claude (Fable~5 model, Anthropic). All steps were independently verified as described above: SageMath (\texttt{integral\_points}, \texttt{rank} with \texttt{proof=True}, in two independent runs), exact symbolic identities in SymPy, and cross-checks against the LMFDB. The author reviewed all arguments and takes full responsibility for the content.
+Substantial parts of this work, including the reduction of Section~\ref{sec:wall}, were developed with the assistance of Claude (Fable~5 model, Anthropic). All steps were independently verified as described above: SageMath (\texttt{integral\_points}, \texttt{rank} with \texttt{proof=True}, in two independent runs), exact symbolic identities in SymPy, and cross-checks against the LMFDB\@. The author reviewed all arguments and takes full responsibility for the content.
 
 \begin{thebibliography}{99}
 
 \bibitem{Beckon} E.~Beckon, \emph{On consecutive triples of powerful numbers}, Rose--Hulman Undergrad.\ Math.\ J. \textbf{20} (2019), no.~2, Article~3.
 
-\bibitem{BennettGhadermarzi} M.~A.~Bennett and A.~Ghadermarzi, \emph{Mordell's equation: a classical approach}, LMS J.\ Comput.\ Math. \textbf{18} (2015), 633--646.
+\bibitem{BennettGhadermarzi} M.~A.~Bennett and A.~Ghadermarzi, \emph{Mordell's equation: a classical approach}, LMS J.\ Comput.\ Math. \textbf{18} (2015), 633--646; doi:10.1112/s1461157015000182.
 
 \bibitem{BPS} M.~A.~Bennett, V.~Patel, and S.~Siksek, \emph{Perfect powers that are sums of consecutive cubes}, Mathematika \textbf{63} (2017), no.~1, 230--249; arXiv:1603.08901.
 
 \bibitem{Chan2025} T.~H.~Chan, \emph{A note on three consecutive powerful numbers}, Integers \textbf{25} (2025), \#A7; arXiv:2503.21485.
 
-\bibitem{Erdos76} P.~Erd\H{o}s, \emph{Problems and results on consecutive integers}, Publ.\ Math.\ Debrecen \textbf{23} (1976), no.~3--4, 271--282.
+\bibitem{Erdos76} P.~Erd\H{o}s, \emph{Problems and results on consecutive integers}, Publ.\ Math.\ Debrecen \textbf{23} (1976), no.~3--4, 271--282; doi:10.5486/pmd.1976.23.3-4.15.
 
-\bibitem{GPZ} J.~Gebel, A.~Peth\H{o}, and H.~G.~Zimmer, \emph{On Mordell's equation}, Compositio Math. \textbf{110} (1998), 335--367.
+\bibitem{GPZ} J.~Gebel, A.~Peth\H{o}, and H.~G.~Zimmer, \emph{On Mordell's equation}, Compositio Math. \textbf{110} (1998), 335--367; doi:10.1023/A:1000281602647.
 
-\bibitem{Golomb} S.~W.~Golomb, \emph{Powerful numbers}, Amer.\ Math.\ Monthly \textbf{77} (1970), 848--852.
+\bibitem{Golomb} S.~W.~Golomb, \emph{Powerful numbers}, Amer.\ Math.\ Monthly \textbf{77} (1970), 848--852; doi:10.1080/00029890.1970.11992598.
 
 \bibitem{LMFDB} The LMFDB Collaboration, \emph{The L-functions and modular forms database}, \url{https://www.lmfdb.org}, 2026. Elliptic curves \texttt{1296.k1} and \texttt{1296.b1}.
 
-\bibitem{MollinWalsh86a} R.~A.~Mollin and P.~G.~Walsh, \emph{On powerful numbers}, Internat.\ J.\ Math.\ Math.\ Sci. \textbf{9} (1986), 801--806.
+\bibitem{MollinWalsh86a} R.~A.~Mollin and P.~G.~Walsh, \emph{On powerful numbers}, Internat.\ J.\ Math.\ Math.\ Sci. \textbf{9} (1986), 801--806; doi:10.1155/S0161171286000984.
 
 \bibitem{MollinWalsh86b} R.~A.~Mollin and P.~G.~Walsh, \emph{A note on powerful numbers, quadratic fields and the Pellian}, C.~R.\ Math.\ Rep.\ Acad.\ Sci.\ Canada \textbf{8} (1986), 109--114.
 
-\bibitem{Petho} A.~Peth\H{o}, \emph{Perfect powers in second order linear recurrences}, J.\ Number Theory \textbf{15} (1982), no.~1, 5--13.
+\bibitem{Petho} A.~Peth\H{o}, \emph{Perfect powers in second order linear recurrences}, J.\ Number Theory \textbf{15} (1982), no.~1, 5--13; doi:10.1016/0022-314X(82)90079-8.
 
 \bibitem{She2025} J.~She, \emph{Nonexistence of consecutive powerful triplets around cubes with prime-square factors}, Integers \textbf{25} (2025), \#A103; arXiv:2507.16828v3.
 
-\bibitem{ShoreyStewart} T.~N.~Shorey and C.~L.~Stewart, \emph{On the Diophantine equation $ax^{2t}+bx^ty+cy^2=d$ and pure powers in recurrence sequences}, Math.\ Scand. \textbf{52} (1983), no.~1, 24--36.
+\bibitem{ShoreyStewart} T.~N.~Shorey and C.~L.~Stewart, \emph{On the Diophantine equation $ax^{2t}+bx^ty+cy^2=d$ and pure powers in recurrence sequences}, Math.\ Scand. \textbf{52} (1983), no.~1, 24--36; doi:10.7146/math.scand.a-11990.
 
-\bibitem{Tzanakis} N.~Tzanakis, \emph{The diophantine equation $x^3-3xy^2-y^3=1$ and related equations}, J.\ Number Theory \textbf{18} (1984), no.~2, 192--205.
+\bibitem{Tzanakis} N.~Tzanakis, \emph{The diophantine equation $x^3-3xy^2-y^3=1$ and related equations}, J.\ Number Theory \textbf{18} (1984), no.~2, 192--205; doi:10.1016/0022-314X(84)90053-2.
 
 \bibitem{vanDoorn} W.~van Doorn, \emph{Three-term arithmetic progressions of consecutive powerful numbers}, arXiv:2605.06697 (2026).
 
