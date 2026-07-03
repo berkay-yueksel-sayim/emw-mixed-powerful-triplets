@@ -1,9 +1,10 @@
 # Nonexistence of consecutive powerful triplets around cubes with mixed prime factorizations
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21174127.svg)](https://doi.org/10.5281/zenodo.21174127)
 **Berkay Yüksel Sayim** — Independent Researcher, Germany
 berksa@tutamail.com · ORCID [0009-0004-4993-7352](https://orcid.org/0009-0004-4993-7352)
 
-Preprint, July 2026 (v11). License: **CC BY 4.0**.
+Preprint, July 2026 (v1.1) — published on Zenodo: doi:[10.5281/zenodo.21174127](https://doi.org/10.5281/zenodo.21174127). License: **CC BY 4.0**.
 
 ## Summary
 
