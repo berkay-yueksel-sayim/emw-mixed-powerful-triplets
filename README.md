@@ -1,10 +1,14 @@
 # Nonexistence of consecutive powerful triplets around cubes with mixed prime factorizations
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21174127.svg?v=1)](https://doi.org/10.5281/zenodo.21174127)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20654529.svg)](https://doi.org/10.5281/zenodo.20654529)
 **Berkay Yüksel Sayim** — Independent Researcher, Germany
 berksa@tutamail.com · ORCID [0009-0004-4993-7352](https://orcid.org/0009-0004-4993-7352)
 
-Preprint, July 2026 (v1.1) — published on Zenodo: doi:[10.5281/zenodo.21174127](https://doi.org/10.5281/zenodo.21174127). License: **CC BY 4.0**.
+Preprint, September 2026 (v1.2) — published on Zenodo, concept DOI (always resolves to the
+latest version): doi:[10.5281/zenodo.20654529](https://doi.org/10.5281/zenodo.20654529).
+
+Licenses: the paper and its sources under **CC BY 4.0** (see `LICENSE-paper`), the
+verification scripts under the **Apache License 2.0** (see `LICENSE` and `NOTICE`).
 
 ## Summary
 
@@ -27,7 +31,7 @@ consecutive powerful triples is refined to arbitrary prime-square moduli.
 
 | File | Description |
 |---|---|
-| `main.pdf` | The paper (10 pages) |
+| `main.pdf` | The paper (11 pages) |
 | `main.tex` | LaTeX source |
 | `ancillary/verify_identities.py` | Exact symbolic verification (SymPy) of every identity used: quotient maps, birational chain, classical invariants, wall substitutions, residue facts, conic orbit, direct scans |
 | `ancillary/verify_identities_output.txt` | Output of the above (all checks pass) |
@@ -60,7 +64,24 @@ curve [0,0,0,−81,243] (rank 0, trivial torsion) and curve [0,0,0,−189,999] (
 
 ## Version history
 
-- **v11 (July 2026)** — editorial revision of v10; **no mathematical content changed.**
+- **v1.2 (September 2026)** — disclosure revision plus one overview figure; **no mathematical content changed.**
+  The acknowledgement in v1.0 and v1.1 stated that substantial parts of the work, including
+  the reduction of Section 5, were developed with AI assistance. That was accurate, but it
+  was too short and not specific enough measured against the broader and more specific
+  disclosure standard I use in my other preprints, and on
+  reviewing my own record I decided that the difference should not stand. This version
+  therefore replaces it with a full "Use of AI tools" section: the case analysis and the
+  reduction of Section 5 were produced by the AI under my direction, while I chose the
+  target, probed the remaining gaps, rejected the attempts that did not hold, and required
+  and organized the verification. The revision was
+  made on my own initiative, not in response to any query or objection. Also new is an
+  overview figure (Figure 1): the 2×2 grid of shape combinations (Chan, She, and the two mixed
+  cases of this note) together with the reduction of the mixed cases to the rank-0 elliptic
+  quotient; it adds no new mathematics. The verification scripts are now released under the
+  Apache License 2.0 (`LICENSE`, `NOTICE`) instead of the earlier CC BY 4.0 notice; the paper
+  itself stays CC BY 4.0. All theorems, proofs, numbers, and verification scripts are unchanged
+  from v1.1.
+- **v11 (July 2026, = Zenodo version 1.1)** — editorial revision of v10; **no mathematical content changed.**
   (1) Section 5: the birational correspondence D₋ ↔ E is now written out explicitly (inverse
   maps, exceptional fibres, points at infinity), making it self-evident that no rational point
   is lost. (2) Remark 14: clarified that the k ≤ 2000 computation is illustrative only and not

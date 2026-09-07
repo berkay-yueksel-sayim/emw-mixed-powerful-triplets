@@ -1,6 +1,8 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.2in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
   pdftitle={Nonexistence of consecutive powerful triplets around cubes with mixed prime factorizations},
@@ -23,7 +25,7 @@
 
 \title{Nonexistence of consecutive powerful triplets around cubes\\ with mixed prime factorizations}
 \author{Berkay Y\"uksel Sayim\\ \small Independent Researcher, Germany\\ \small \texttt{berksa@tutamail.com}~$\cdot$~ORCID 0009-0004-4993-7352}
-\date{July 2026}
+\date{September 2026}
 
 \begin{document}
 \maketitle
@@ -65,7 +67,41 @@ with $t\ge 7$ in family (M1) and $t\le -5$ in family (M2). Equation~\eqref{eq:wa
 The only solutions of $t^6+t^3+1=3w^2$ in rational numbers are $(t,w)=(1,\pm 1)$.
 \end{theorem}
 
-The proof (Section~\ref{sec:wall}) exploits the palindromic symmetry $t\mapsto 1/t$ of the genus-$2$ curve $3w^2=t^6+t^3+1$: the curve admits two independent elliptic quotients over $\Q$, and one of them has Mordell--Weil rank $0$ with trivial torsion --- it is the curve \texttt{1296.k1} in the LMFDB \cite{LMFDB}, Cremona label \texttt{1296f2} --- which pins down all rational points. Since $t=1$ lies in neither branch range, both remaining branches are empty and Theorem~\ref{thm:main} follows.
+The proof (Section~\ref{sec:wall}) exploits the palindromic symmetry $t\mapsto 1/t$ of the genus-$2$ curve $3w^2=t^6+t^3+1$: the curve admits two independent elliptic quotients over $\Q$, and one of them has Mordell--Weil rank $0$ with trivial torsion --- it is the curve \texttt{1296.k1} in the LMFDB \cite{LMFDB}, Cremona label \texttt{1296f2} --- which pins down all rational points. Since $t=1$ lies in neither branch range, both remaining branches are empty and Theorem~\ref{thm:main} follows. Figure~\ref{fig:overview} summarizes the four shape combinations and the reduction.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  cell/.style={draw, minimum width=2.7cm, minimum height=1.05cm, align=center, inner sep=2pt},
+  done/.style={cell, fill=black!5},
+  ours/.style={cell, fill=black!16, very thick},
+  stage/.style={draw, rounded corners=2pt, align=center, inner sep=4pt, text width=3.05cm, minimum height=2.15cm},
+  arr/.style={-{Stealth[length=2mm]}, thick},
+]
+% ---- the 2x2 square of shape combinations (top) ----
+\node[align=center] at (-1.45,4.55) {$x^3+1=q^3z^2$};
+\node[align=center] at ( 1.45,4.55) {$x^3+1=q^2b^3$};
+\node[anchor=east]  at (-2.95,3.85) {$x^3-1=p^3y^2$};
+\node[anchor=east]  at (-2.95,2.65) {$x^3-1=p^2a^3$};
+\node[done] (chan) at (-1.45,3.85) {Chan~\cite{Chan2025}\\ excluded};
+\node[ours] (m2)   at ( 1.45,3.85) {\textbf{(M2)}\\ Theorem~\ref{thm:main}};
+\node[ours] (m1)   at (-1.45,2.65) {\textbf{(M1)}\\ Theorem~\ref{thm:main}};
+\node[done] (she)  at ( 1.45,2.65) {She~\cite{She2025}\\ excluded};
+% ---- how the mixed cases close (bottom) ----
+\node[stage] (s1) at (-5.6,0) {\textbf{18 branches}\\ (9 per family), split by $x \bmod 3$ and by where the controlling primes $p,q$ sit among the factors of $x^3\mp1$\\ (Sections~\ref{sec:M1}--\ref{sec:M2})};
+\node[stage] (s2) at (-1.87,0) {\textbf{16 closed}\\ by congruences, the cubic lemmas of Tzanakis and She, and known integral points on five Mordell curves $Y^2=X^3+k$};
+\node[stage] (s3) at ( 1.87,0) {\textbf{2 survive}, one per family, both the same equation\\[2pt] $t^6+t^3+1=3w^2$\\[2pt] (M1): $t\ge 7$; \ (M2): $t\le -5$\\ a curve of genus $2$};
+\node[stage] (s4) at ( 5.6,0) {symmetry $t\mapsto 1/t$ $\Rightarrow$ elliptic quotient $E\colon y^2=x^3-81x+243$ (\texttt{1296.k1}), rank $0$ $\Rightarrow$ only $(t,w)=(1,\pm1)$; $t=1$ in neither range $\Rightarrow$ \textbf{both families empty} (Section~\ref{sec:wall})};
+\draw[arr] (s1) -- (s2); \draw[arr] (s2) -- (s3); \draw[arr] (s3) -- (s4);
+% ---- from the two mixed cells into the reduction ----
+\draw[thick] (m2.east) -| (3.25,1.65) -- (-5.6,1.65);
+\draw[thick] (m1.south) -- (-1.45,1.65);
+\draw[arr] (-5.6,1.65) -- (s1.north);
+\end{tikzpicture}
+\caption{Overview. Top: the four shape combinations for the outer members of a consecutive powerful triple $(x^3-1,\,x^3,\,x^3+1)$ with $p,q$ prime; the symmetric cases were excluded by Chan~\cite{Chan2025} and She~\cite{She2025}, the mixed cases (M1), (M2) by Theorem~\ref{thm:main}. Bottom: how the mixed cases close. A branch is counted once for each case marked \emph{Closed} in Sections~\ref{sec:M1}--\ref{sec:M2}; the five Mordell curves are those of Lemma~\ref{lem:mordell}.}
+\label{fig:overview}
+\end{figure}
 
 As a complementary result in the same circle of ideas we record a modular refinement of a constraint of Beckon \cite{Beckon} on arbitrary consecutive powerful triples (not assuming a cube in the middle).
 
@@ -276,8 +312,16 @@ If $m$ is powerful and $\ell$ prime, then $\vp_\ell(m)\neq1$; in particular, if 
 
 Together with \cite{Chan2025} and \cite{She2025}, Theorem~\ref{thm:main} completes the four shape-combinations $\{p^3\cdot\square,\,p^2\cdot\mathrm{cube}\}^2$ for consecutive powerful triples around a cube in which both outer members are divisible by a single controlling prime to an exact pattern. Natural next steps in this program include the relaxations $p=q$ and composite cofactors, and She's question whether $x^n-1$ can be powerful for $x>1$, $n>2$. The bielliptic reduction of Section~\ref{sec:wall} may be of independent use for other palindromic sextic obstructions in this circle of problems.
 
-\paragraph{Acknowledgements.}
-Substantial parts of this work, including the reduction of Section~\ref{sec:wall}, were developed with the assistance of Claude (Fable~5 model, Anthropic). All steps were independently verified as described above: SageMath (\texttt{integral\_points}, \texttt{rank} with \texttt{proof=True}, in two independent runs), exact symbolic identities in SymPy, and cross-checks against the LMFDB\@. The author reviewed all arguments and takes full responsibility for the content.
+\section*{Use of AI tools}
+
+In the research, processing, and writing of this paper and its results I worked together with generative AI tools (large language models, mainly Claude, by Anthropic, inside Claude Code; the mathematical work in this note was done with the Fable~5 model). For this paper the mathematical work itself ran essentially through a single instance. I built and refined a supporting harness for mathematics that the instance can access, a set of rules and parameters that I improved and tested with agents over many rounds, benchmarking models and configurations against the sub-cases that were still open, in order to find out which setup actually made progress where earlier ones had stalled, and feeding what I learned back into the rules. Verification was then run separately, through independent checking passes whose task was to attack the result rather than to produce it. In other work I moved to a system of several coordinated specialized instances, but that is not what produced this note: one instance was enough. I lead this collaboration: I choose the research directions, set the goals, and make the final decisions in open exchange with the AI, learning actively as the work proceeds. The AI carries out the drafting, including the mathematical and technical parts, the numerical computation, and the literature search, under my direction. The AI works autonomously only task by task, within the structure I develop through feedback: it completes a task, and at open questions that need me it stops until the point is settled before the next step. Along the way I witness and take the decisions that shape the path, and it is usual for me to spot things that need improvement or closer thought. The work spans many separate runs over several weeks; and had I let the AI do all of it together alone, even if it is possible, it would no longer be my work but the AI's.
+
+For this paper in particular I want to be precise about who did what, since the mathematics is the substance of the result. The case analysis of Sections~\ref{sec:M1}--\ref{sec:M2} and the reduction of Section~\ref{sec:wall}, including the descent to the rank-zero elliptic quotient, were produced by the AI under my direction. My own contribution was to choose the target, to work towards it by driving the improvements and the research it required, to keep probing the remaining gaps until they closed, to reject the attempts that did not hold, and to require and organize the verification. I do not claim the mathematical invention here as my own work.
+
+I run multiple verifications at the different stages of the work and one before release, including cross-checks with an unrelated AI model from a different company, and all references are checked against the original sources. Concretely, the symbolic identities are confirmed exactly in SymPy, and the Mordell--Weil rank in SageMath (\texttt{integral\_points}, \texttt{rank} with \texttt{proof=True}, in two independent runs) and against the LMFDB\@. In the end what matters are human eyes, a principle that is itself written into the parameters of my system: I have to reach out to experts after publishing for review and feedback, so I learn what is solid and what must be corrected or falsified. My scripts for reproduction and review are released with this record. These tools are not authors; I am the author, and I take full responsibility for all scientific content and decisions leading to these results and their publication.
+
+\section*{Acknowledgements}
+No external funding was received. The author declares no competing interests.
 
 \begin{thebibliography}{99}
 
