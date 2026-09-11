@@ -4,7 +4,7 @@
 **Berkay Yüksel Sayim** — Independent Researcher, Germany
 berksa@tutamail.com · ORCID [0009-0004-4993-7352](https://orcid.org/0009-0004-4993-7352)
 
-Preprint, September 2026 (v1.2) — published on Zenodo, concept DOI (always resolves to the
+Preprint, September 2026 (v1.3) — published on Zenodo, concept DOI (always resolves to the
 latest version): doi:[10.5281/zenodo.20654529](https://doi.org/10.5281/zenodo.20654529).
 
 Licenses: the paper and its sources under **CC BY 4.0** (see `LICENSE-paper`), the
@@ -64,6 +64,15 @@ curve [0,0,0,−81,243] (rank 0, trivial torsion) and curve [0,0,0,−189,999] (
 
 ## Version history
 
+- **v1.3 (September 2026)** — citation correction; **no mathematical content changed.**
+  Reference [5], cited in the introduction for the Erdős–Mollin–Walsh conjecture, previously pointed
+  to Erdős, *Problems and results on consecutive integers*, Publ. Math. Debrecen 23 (1976), 271–282.
+  That paper discusses consecutive powerful *pairs* (p. 277) but not the three-consecutive question.
+  The reference now points to Erdős, *Problems and results on number theoretic properties of
+  consecutive integers and related questions*, Congressus Numerantium XVI (1976), 25–44, where the
+  question is raised (p. 31). The misattribution is common in the literature, as noted by Bajpai,
+  Bennett and Chan (Int. J. Number Theory 20 (2024), §7); both Erdős papers were checked in the
+  original for this correction. Nothing else changed from v1.2.
 - **v1.2 (September 2026)** — disclosure revision plus one overview figure; **no mathematical content changed.**
   The acknowledgement in v1.0 and v1.1 stated that substantial parts of the work, including
   the reduction of Section 5, were developed with AI assistance. That was accurate, but it
